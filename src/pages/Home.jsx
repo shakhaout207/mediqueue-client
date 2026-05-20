@@ -34,7 +34,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/tutors/home")
+      .get(`${import.meta.env.VITE_API_URL}/tutors/home`)
       .then((res) => {
         setTutors(res.data);
         setLoading(false);

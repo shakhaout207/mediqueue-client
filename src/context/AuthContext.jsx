@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       if (currentUser) {
         try {
-          const res = await axios.post("http://localhost:5000/auth/jwt", {
+          const res = await axios.post("${import.meta.env.VITE_API_URL}/auth/jwt", {
             email: currentUser.email,
           });
           localStorage.setItem("token", res.data.token);

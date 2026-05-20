@@ -12,7 +12,7 @@ const MyTutors = () => {
 
   const fetchMyTutors = () => {
     const token = getToken();
-    axios.get("http://localhost:5000/tutors/my-tutors", {
+axios.get(`${import.meta.env.VITE_API_URL}/tutors/my-tutors`, { 
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => {
@@ -42,7 +42,7 @@ const MyTutors = () => {
       if (result.isConfirmed) {
         try {
           const token = getToken();
-          await axios.delete(`http://localhost:5000/tutors/${id}`, {
+          await axios.delete(`${import.meta.env.VITE_API_URL}/tutors/${id}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           setTutors(tutors.filter((t) => t._id !== id));
@@ -75,7 +75,7 @@ const MyTutors = () => {
     try {
       const token = getToken();
       const res = await axios.put(
-        `http://localhost:5000/tutors/${editTutor._id}`,
+        `${import.meta.env.VITE_API_URL}/tutors/${editTutor._id}`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -15,7 +15,7 @@ const TutorDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/tutors/${id}`)
+      .get(`${import.meta.env.VITE_API_URL}/tutors/${id}`)
       .then((res) => {
         setTutor(res.data);
         setLoading(false);
@@ -51,7 +51,7 @@ const TutorDetails = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:5000/bookings",
+        `${import.meta.env.VITE_API_URL}/bookings`,
         {
           tutorId: tutor._id,
           studentName,

@@ -41,7 +41,7 @@ const AddTutor = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:5000/tutors", tutorData, {
+      await axios.post("${import.meta.env.VITE_API_URL}/tutors", tutorData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("Tutor added successfully!");

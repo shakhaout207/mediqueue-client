@@ -10,7 +10,7 @@ const MyBookedSessions = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:5000/bookings/my-bookings", {
+      .get(`${import.meta.env.VITE_API_URL}/bookings/my-bookings`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -34,7 +34,7 @@ const MyBookedSessions = () => {
         try {
           const token = localStorage.getItem("token");
           await axios.patch(
-            `http://localhost:5000/bookings/${id}/cancel`,
+            `${import.meta.env.VITE_API_URL}/bookings/${id}/cancel`,
             {},
             { headers: { Authorization: `Bearer ${token}` } }
           );
