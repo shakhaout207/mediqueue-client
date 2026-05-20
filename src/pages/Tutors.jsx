@@ -11,7 +11,8 @@ const Tutors = () => {
 
   const fetchTutors = (searchVal = "", start = "", end = "") => {
     setLoading(true);
-let url = `${import.meta.env.VITE_API_URL}/tutors?`;
+    // Updated API URL for deployment
+    let url = `https://mediqueue-server-j43p.onrender.com/tutors?`;
     if (searchVal) url += `search=${searchVal}&`;
     if (start) url += `startDate=${start}&`;
     if (end) url += `endDate=${end}&`;

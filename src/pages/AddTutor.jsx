@@ -4,6 +4,8 @@ import { useAuth } from "../context/AuthContext";
 import axios from "axios";
 import toast from "react-hot-toast";
 
+const API_URL = "https://mediqueue-server-j43p.onrender.com";
+
 const AddTutor = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -41,7 +43,7 @@ const AddTutor = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.post("${import.meta.env.VITE_API_URL}/tutors", tutorData, {
+      await axios.post(`${API_URL}/tutors`, tutorData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("Tutor added successfully!");

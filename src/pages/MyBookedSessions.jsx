@@ -9,8 +9,9 @@ const MyBookedSessions = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
+    // Updated API URL
     axios
-      .get(`${import.meta.env.VITE_API_URL}/bookings/my-bookings`, {
+      .get(`https://mediqueue-server-j43p.onrender.com/bookings/my-bookings`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -34,7 +35,7 @@ const MyBookedSessions = () => {
         try {
           const token = localStorage.getItem("token");
           await axios.patch(
-            `${import.meta.env.VITE_API_URL}/bookings/${id}/cancel`,
+            `https://mediqueue-server-j43p.onrender.com/bookings/${id}/cancel`,
             {},
             { headers: { Authorization: `Bearer ${token}` } }
           );
