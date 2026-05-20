@@ -11,7 +11,7 @@ const Tutors = () => {
 
   const fetchTutors = (searchVal = "", start = "", end = "") => {
     setLoading(true);
-    let url = let url = `${import.meta.env.VITE_API_URL}/tutors?`;
+let url = `${import.meta.env.VITE_API_URL}/tutors?`;
     if (searchVal) url += `search=${searchVal}&`;
     if (start) url += `startDate=${start}&`;
     if (end) url += `endDate=${end}&`;
