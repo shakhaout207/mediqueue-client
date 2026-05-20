@@ -14,6 +14,8 @@ const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
+const API_URL = import.meta.env.VITE_API_URL || "https://mediqueue-server-j43p.onrender.com";
+
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -46,7 +48,7 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       if (currentUser) {
         try {
-          const res = await axios.post("${import.meta.env.VITE_API_URL}/auth/jwt", {
+          const res = await axios.post(`${API_URL}/auth/jwt`, {
             email: currentUser.email,
           });
           localStorage.setItem("token", res.data.token);
