@@ -1,6 +1,6 @@
 # MediQueue - Tutor Booking System
 
-Live Site URL: [MediQueue](https://mediqueue.vercel.app)
+Live Site URL:  https://mediqueue-client-psi.vercel.app
 
 ## Features
 
@@ -10,4 +10,4 @@ Live Site URL: [MediQueue](https://mediqueue.vercel.app)
 - 👨‍🏫 Add, update and delete your own tutors
 - 📋 View and cancel your booked sessions
 - 🌙 Dark/Light theme toggle
-- 📱 Fully responsive for mobile, tablet and desktop
+- 📱 Fully responsive for mobile, tablet and desktop.
