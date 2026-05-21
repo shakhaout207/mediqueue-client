@@ -124,7 +124,7 @@ const Register = () => {
           </button>
         </form>
 
-        <div className="my-4 flex items-center gap-2">
+        <div className="my-4 flex items-center gap-3">
           <hr className="flex-grow border-gray-300" />
           <span className="text-gray-400 text-sm">OR</span>
           <hr className="flex-grow border-gray-300" />
