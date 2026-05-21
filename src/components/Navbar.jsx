@@ -103,7 +103,7 @@ const Navbar = () => {
               <Link to="/login" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
                 Login
               </Link>
-              <Link to="/register" className="border border-blue-600 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition font-semibold">
+              <Link to="/register" className="border border-blue-600 text-blue-601 dark:text-blue-400 px-4 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition font-semibold">
                 Register
               </Link>
             </div>
