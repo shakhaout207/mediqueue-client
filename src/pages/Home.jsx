@@ -65,7 +65,7 @@ const Home = () => {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-3 h-3 rounded-full transition ${
+              className={`w-4 h-4 rounded-full transition ${
                 i === current ? "bg-white" : "bg-white/40"
               }`}
             />
