@@ -215,7 +215,7 @@ const TutorDetails = () => {
                   className="w-full px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-white"
                 />
               </div>
-              <div className="flex gap-3 pt-2">
+              <div className="flex gap-4 pt-2">
                 <button
                   type="submit"
                   disabled={booking}
