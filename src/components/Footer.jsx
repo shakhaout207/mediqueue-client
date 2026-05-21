@@ -31,7 +31,7 @@ const Footer = () => {
           <h3 className="text-lg md:text-xl font-semibold text-white">Contact Us</h3>
           <p className="text-sm md:text-base flex items-center gap-2">📧 support@mediqueue.com</p>
           <p className="text-sm md:text-base flex items-center gap-2">📞 +880 1234 567890</p>
-          <div className="flex gap-6 text-2xl mt-2">
+          <div className="flex gap-7 text-2xl mt-2">
             <a href="#" className="hover:text-blue-500 transition duration-200"><FaFacebook /></a>
             <a href="#" className="hover:text-sky-400 transition duration-200"><FaTwitter /></a>
             <a href="#" className="hover:text-blue-600 transition duration-200"><FaLinkedin /></a>
